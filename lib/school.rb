@@ -5,28 +5,19 @@ class School
     @roster = {}
   end
 
-  def my_mmethod
-    clear_roster
+  def add_student(name, grade)
+    if roster.include?(grade) == false
+    roster[grade] = []
   end
+    roster[grade] << name
+ end
+   def grade(grade)
+    roster[grade]
+   end
 
-private
-  def clear_oster
-    @roster.clear
+   def sort
+    roster.each do |grade, name|
+    roster[grade] = name.sort
+   end
   end
-
- #  def add_student(name, grade)
- #    if roster.include?(grade) == false
- #    roster[grade] = []
- #  end
- #    roster[grade] << name
- # end
- #   def grade(grade)
- #    roster[grade]
- #   end
- #
- #   def sort
- #    roster.each do |grade, name|
- #    roster[grade] = name.sort
- #   end
- #  end
 end
