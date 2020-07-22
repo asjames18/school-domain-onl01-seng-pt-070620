@@ -5,6 +5,10 @@ class School
     @roster = {}
   end
 
+  def my_mmethod
+    clear_roster
+  end
+
 private
   def clear_oster
     @roster.clear
